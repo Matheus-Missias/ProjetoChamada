@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioChamada" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0493e22-bccb-41fc-a6b0-1933aa141429">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Chamada Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[Y2hhbWFkYS50YWJfYWx1bm8gQVMgLDQwLDYyLDBhYTU4YTU5LTk3YTAtNGM3Zi04YTQ0LWEyMWJm
+NjM1MmY0Mjs=]]>
+	</property>
+	<queryString>
+		<![CDATA[SELECT chamada.tab_aluno.`ALUNO_ID`,
+	chamada.tab_aluno.`ALUNO_NOME`,
+	chamada.tab_aluno.`ALUNO_PRESENCA`,
+	chamada.tab_aluno.`AULA_ID`
+FROM chamada.tab_aluno]]>
+	</queryString>
+	<field name="ALUNO_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="ALUNO_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_aluno"/>
+	</field>
+	<field name="ALUNO_NOME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ALUNO_NOME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_aluno"/>
+	</field>
+	<field name="ALUNO_PRESENCA" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="ALUNO_PRESENCA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_aluno"/>
+	</field>
+	<field name="AULA_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AULA_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_aluno"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="125" y="20" width="304" height="38" uuid="70864d2b-8820-4615-8c91-2e921bebd6ff"/>
+				<textElement textAlignment="Center">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Presença]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="fe5dda35-d433-44c4-af34-f389726f9914">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59c584fe-4d86-42aa-954e-494327daa134"/>
+				</reportElement>
+				<text><![CDATA[ALUNO_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="30" uuid="7f7c4be6-d291-4de1-b3bd-7c4596640f8a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7fc31dff-818c-4065-9de1-30b7a90abfc1"/>
+				</reportElement>
+				<text><![CDATA[ALUNO_NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="100" height="30" uuid="777eb8ab-2304-4d26-9133-32ccd741fb88">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3aae6af0-0cae-48f2-ab72-c1d2f70a3c3d"/>
+				</reportElement>
+				<text><![CDATA[ALUNO_PRESENCA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="0" width="100" height="30" uuid="9aad0ee2-dd31-497a-8eda-cbb90a6caf8a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb5f29a4-9acf-4357-b10a-30113c21320f"/>
+				</reportElement>
+				<text><![CDATA[AULA_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="1807de3a-885c-455b-8aed-125645cedd6e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59c584fe-4d86-42aa-954e-494327daa134"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ALUNO_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="10" width="100" height="30" uuid="52e87066-9eb6-40ee-9dc6-e144396886dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7fc31dff-818c-4065-9de1-30b7a90abfc1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ALUNO_NOME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="10" width="100" height="30" uuid="dfae2f1c-3211-47f3-82d4-7f2562b13911">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3aae6af0-0cae-48f2-ab72-c1d2f70a3c3d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ALUNO_PRESENCA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="10" width="100" height="30" uuid="eea32c34-0356-4878-baf0-df641beb834a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb5f29a4-9acf-4357-b10a-30113c21320f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{AULA_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="21" width="100" height="30" uuid="40049cfb-083a-4ab5-9c3e-8bf359fc6202"/>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="18" width="100" height="30" uuid="aa5aa075-b628-4b62-9a63-28656e7d91cc"/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="25" width="100" height="30" uuid="61ac7a52-7122-44dd-b57f-7235548fe025"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="240" y="23" width="100" height="30" uuid="696895e6-473b-452a-8dc5-41ca35df371a"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="15" width="100" height="30" uuid="354db612-5bd8-42c2-ba3b-b6a9053720f6"/>
+				<text><![CDATA[Data de Relatório:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="444" y="15" width="100" height="30" uuid="523ab7ff-b3d4-4c5b-8242-e6707516166f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
